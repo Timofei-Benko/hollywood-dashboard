@@ -1,17 +1,18 @@
 .content {
-    @include flexible(space-between, flex-start, row, nowrap);    
+    @include flexible(space-between, flex-start, row, wrap);    
+    flex: 1 1.5 1030px;    
 }
 
 .monthly-progress {
     @include flexible(center, flex-start, column, nowrap);
-    
-    margin: 1em;
+    flex: 5 5 400px;
 
+    width: 704px;
+    margin: 1em;
     background-color: #FFFFFF;
 
     &__header {
         @include flexible(space-between, center, row, nowrap);
-
         width: 100%;
         padding: 1em 1em 1.5em 1em;
     }
@@ -31,16 +32,20 @@
     }
 
     &__btn-month {
-         @include background-gradient (to right); 
+         display: block;
+
+         padding: 4px 12px;
+        
          border: none;
          border-radius: 30px;
+         @include background-gradient (to right);
+
          color: #FFFFFF;
-         padding: 4px 12px;
          text-align: center;
          text-decoration: none;
-         display: block;
          font-weight: 700;
          font-size: 12px;
+
          cursor: pointer;
     }
 
@@ -82,8 +87,8 @@
     @include flexible(center, center, column, nowrap);
 
     width: 264px;
-    margin: 1em;
-    padding: 1em 1em 1.5em 1em;
+    margin: 1em 0 1em 0;
+    padding: 1em;
 
     background-color: #FFFFFF;
 
@@ -93,10 +98,126 @@
 
     &__circle-graph {
         width: 124px;
-        margin: 31px 0 36px 0; 
+        margin: 31px 0 26px 0; 
     }
 
-    &__revenue__spread {
-        @extend .card__spread;
+    &__spread {  //try to @extend these
+        position: relative;
+        //margin-bottom: 10px;
+    }
+
+    &__buy-value,
+    &__sell-value {
+      margin-bottom: 8px;
+      font-size: 12px;
+      color: #BFBFBF;
+    }
+
+    &__buy-value::before {
+        content: "";
+  
+        position: relative;
+        bottom: 8px;
+        width: 0;
+        height: 0;
+        margin-right: 3px;
+  
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+        border-bottom: 6px solid #A889E9;
+      }
+  
+      &__sell-value::before {
+        content: "";
+  
+        position: relative;
+        top: 10px;
+        width: 0;
+        height: 0;
+        margin-right: 3px;
+        margin-left: 5px;
+  
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+        border-top: 6px solid $primary-color;
+      }
+}
+
+.customers-feed {
+    @include flexible(flex-start, flex-start, column, nowrap);
+    // flex: 1 1 370px;
+
+    width: 467px;
+    height: 508px;
+    margin: 0 1em 1em 1em;
+    padding: 1em 1em 1em 1em;
+
+    background-color: #FFFFFF;
+
+    overflow-y: scroll;
+
+    &__title {
+        @include main-section-title;
+    }
+
+    &__actor {
+        @include flexible(space-between, flex-start, row, nowrap);
+
+        margin: 2em 0 0 0;
+    }
+
+    &__actor-photo-container {
+        @include flexible(center, center, column, nowrap);
+        width: 45px;
+        margin-right: 1.5em;
+    }
+
+    &__actor-photo {
+        width: 42px;
+    }
+
+    &__date {
+        font-size: 7.1px;
+        word-spacing: 0.1px;
+        color: #BFBFBF;
+    }
+
+    &__list {
+       font-size: 12px;
+       color: #BFBFBF;
+       line-height: 1.6em;
+    }
+
+    &__item {
+        display: block;
+        padding: 1.2em;
+        border: 1px solid #F1F1F1;
+        background-color: #FCFCFC; 
+    }
+
+    &__item:nth-child(2) {
+        position: relative;
+        margin: 1.5em 0 1.5em 5em;
+    }
+
+    &__item:nth-child(2)::before {
+        content: "";
+
+        position: absolute;
+        top: 0;
+        left: -20px;
+        display: block;
+        height: 195px;
+        width: 4px;
+        background-color: #F1F1F1;
+    }
+
+    &__item:nth-child(3) {
+        margin-left: 5em;
+    }
+
+    &__item > span {
+        font-weight: 700;
+        color: #777777;
     }
 }
