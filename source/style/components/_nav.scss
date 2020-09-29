@@ -1,0 +1,87 @@
+.nav {
+
+  @include background-gradient(to top);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__home {
+    display: flex;
+    flex: 0 0 70px;
+    justify-content: center;
+    align-items: center;
+
+    width: 70px;
+    height: 70px;
+    margin-bottom: 30px;
+    
+    background: #FFFFFF;
+  }
+
+  &__logo {
+    @include text-gradient(to top);
+
+    width: 70px;
+
+    font-family: 'Deftone Stylus';
+    font-size: 30px;
+    text-align: center;
+  }
+
+  &__list {
+    position: relative;
+    flex: 1 1 930px;
+
+    .nav__link {
+      display: block;
+      width: 70px;
+      padding-top: 30px;
+      margin-bottom: 30px;
+  
+      font-size: 10px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    .nav__link:hover::after,
+    .nav__link:active::after {
+      position: absolute;
+      right: -5px;
+      // top: 0;
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-left: 5px solid #FD725D;
+      border-bottom: 10px solid transparent;
+    }
+
+    .nav__link--home {
+      background: url(../img/nav/home.png) no-repeat top;
+    }
+
+    .nav__link--stactics {
+      background: url(../img/nav/stactics.png) no-repeat top;
+    }
+    .nav__link--users {
+      background: url(../img/nav/users.png) no-repeat top;
+    }
+    .nav__link--settings {
+      background: url(../img/nav/settings.png) no-repeat top;
+    }
+    .nav__link--quires {
+      background: url(../img/nav/quires.png) no-repeat top;
+    }
+  }
+
+  &__exit {
+    flex: 0 0 20px;
+    display: block;
+    width: 20px;
+    margin: 20px 0;
+
+    background: url(../img/nav/power.png);
+  }
+  
+}

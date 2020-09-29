@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./source/style/main.css">
+  <title>Hollywood Dashboard</title>
+</head>
+<body>
+
+  <div class="page">
+
+    <nav class="nav">
+      <a class="nav__home" href="#">
+        <span class="nav__logo">W</span>
+      </a>
+      <div class="nav__list">
+        <a class="nav__link nav__link--home" href="#">Home</a>
+        <a class="nav__link nav__link--stactics" href="#">Stactics</a>
+        <a class="nav__link nav__link--users" href="#">Users</a>
+        <a class="nav__link nav__link--settings" href="#">Settings</a>
+        <a class="nav__link nav__link--quires" href="#">Quires</a>
+      </div>
+      <a class="nav__exit" href="#"></a>
+    </nav> <!-- Nav -->
+
+    <div class="container">
+
+      <header class="header">
+
+        <ul class="options">
+          
+          <li class="options__item">
+            <button class="options__button options__button--more"></button>
+          </li>
+
+          <li class="options__item">
+            <button class="options__button options__button--folder"></button>
+          </li>
+          
+          <li class="options__item">
+            <button class="options__button options__button--settings"></button>
+          </li>
+          
+          <li class="options__item options__item--search">
+            <div class="search">
+              <input class="search__input" type="search" name="search" placeholder="Search Anything Here....">
+              <button class="search__submit" type="submit"></button>
+            </div>
+          </li>
+          
+          <li class="options__item">
+            <button class="options__button options__button--upload"></button>
+          </li>
+          
+          <li class="options__item">
+            <button class="options__button options__button--envelope"></button>
+          </li>
+          
+          <li class="options__item">
+            <button class="options__button options__button--planet-earth"></button>
+          </li>
+          
+          <li class="options__item manager">
+            <img class="manager__photo" src="./source/img/header/kendall-jenner.png" alt="Kendall Jenner">
+            <div class="manager__about">
+              <a class="manager__name" href="#">Kendall Jenner</a>
+              <p class="manager__position">Cheif Authority</p>
+            </div>
+            <a class="manager__more-information" href="#"><span></span></a>
+          </li>
+        
+        </ul> <!-- Header Options -->
+        
+        <div class="stactics">
+          <ul class="stactics__list">
+            
+            <li class="card">
+              <h3 class="card__title">Daily Visitors</h3>
+              <span class="card__amount">150,0000</span>
+              <div class="card__spread">
+                <span class="card__buy-value">1020</span>
+                <span class="card__sell-value">1020</span>
+              </div>
+            </li>
+
+            <li class="card">
+              <h3 class="card__title">Daily Customers</h3>
+              <span class="card__amount">120,0000</span>
+              <div class="card__spread">
+                <span class="card__buy-value">1020</span>
+                <span class="card__sell-value">1020</span>
+              </div>
+            </li>
+
+            <li class="card">
+              <h3 class="card__title">Daily Orders</h3>
+              <span class="card__amount">900,000</span>
+              <div class="card__spread">
+                <span class="card__buy-value">1020</span>
+                <span class="card__sell-value">1020</span>
+              </div>
+            </li>
+
+            <li class="card">
+              <h3 class="card__title">Daily Sales</h3>
+              <span class="card__amount">850,000</span>
+              <div class="card__spread">
+                <span class="card__buy-value">1020</span>
+                <span class="card__sell-value">1020</span>
+              </div>
+            </li>
+
+            <li class="card">
+              <h3 class="card__title">Daily Shipments</h3>
+              <span class="card__amount">750,000</span>
+              <div class="card__spread">
+                <span class="card__buy-value">1020</span>
+                <span class="card__sell-value">1020</span>
+              </div>
+            </li>
+
+            <li class="card">
+              <h3 class="card__title">Daily Revenue</h3>
+              <span class="card__amount">$985,0000</span>
+              <div class="card__spread">
+                <span class="card__buy-value">1020</span>
+                <span class="card__sell-value">1020</span>
+              </div>
+            </li>
+
+            <li class="card">
+              <h3 class="card__title">Daily Reviews</h3>
+              <span class="card__amount">600,000</span>
+              <div class="card__spread">
+                <span class="card__buy-value">1020</span>
+                <span class="card__sell-value">1020</span>
+              </div>
+            </li>
+            
+          </ul>
+          <button class="stactics__add-card">+  Add Stactics</button>
+        </div> <!-- Header Stactics -->
+      
+      </header> <!-- Header -->
+      
+
+      <div class="main">
+        <div class="content">
+          <div class="monthly-progress">
+            <div class="monthly-progress__header">
+              <h2 class="monthly-progress__title">Monthly revenue progress</h2>
+              <div class="monthly-progress__settings">
+                <button class="monthly-progress__btn-month"></button>
+                <button class="monthly-progress__btn-day"></button>
+                <button class="monthly-progress__btn-year"></button>
+                <div class="monthly-progress__btn-more">
+                  <div class="monthly-progress__btn-more-elem"></div>
+                  <div class="monthly-progress__btn-more-elem"></div>
+                  <div class="monthly-progress__btn-more-elem"></div>
+                </div>
+              </div>
+              <img src="./source/img/main/graph.png" alt="Monthly revenue progress graph" class="monthly-progress__graph">
+            </div>
+          </div> 
+          <div class="revenue"></div>
+          <div class="customers-feed"></div>
+          <div class="box">
+            <div class="todays-task"></div>
+            <div class="pogress"></div>
+            <div class="shipments"></div>
+          </div>
+        </div>
+        <aside class="aside"></aside>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+.content {
+    @include flexible(space-between, flex-start, row, wrap);
+    
+    margin: 1em; 
+}
+
+.monthly-progress {
+    @include flexible(center, flex-start, row, wrap);
+    
+    background-color: #FFFFFF;
+
+    &__header {
+        
+    }
+
+    &__graph {
+        width: 582px;
+    }
+}
+
+.revenue {
+    width: 264px;
+    height: 264px;
+
+    background-color: $primary-color;
+}

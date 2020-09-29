@@ -1,0 +1,31 @@
+.page {
+  display: flex;
+
+  max-width: 1370px;
+  height: 1000px;
+  margin: 0 auto;
+
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  background-color: bisque;
+}
+
+.nav {
+  width: 70px;
+  height: 1000px;
+  
+  background-color: crimson;
+}
+
+.container {
+  flex-grow: 1;
+
+  background-color: darkcyan;
+}
+
+.content {
+  max-width: 1021px; 
+}
+
+// .container--inner {
+
+// }
