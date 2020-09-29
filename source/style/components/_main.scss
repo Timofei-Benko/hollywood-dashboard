@@ -1,26 +1,102 @@
 .content {
-    @include flexible(space-between, flex-start, row, wrap);
-    
-    margin: 1em; 
+    @include flexible(space-between, flex-start, row, nowrap);    
 }
 
 .monthly-progress {
-    @include flexible(center, flex-start, row, wrap);
+    @include flexible(center, flex-start, column, nowrap);
     
+    margin: 1em;
+
     background-color: #FFFFFF;
 
     &__header {
-        
+        @include flexible(space-between, center, row, nowrap);
+
+        width: 100%;
+        padding: 1em 1em 1.5em 1em;
+    }
+
+    &__title {
+        @include main-section-title;
+    }
+
+    &__settings {
+        @include flexible(space-between, center, row, nowrap)
     }
 
     &__graph {
         width: 582px;
+        padding: 1em 1em 1.5em 1em;
+        overflow-x: scroll;
+    }
+
+    &__btn-month {
+         @include background-gradient (to right); 
+         border: none;
+         border-radius: 30px;
+         color: #FFFFFF;
+         padding: 4px 12px;
+         text-align: center;
+         text-decoration: none;
+         display: block;
+         font-weight: 700;
+         font-size: 12px;
+         cursor: pointer;
+    }
+
+    &__btn-day,
+    &__btn-year {
+        @extend .monthly-progress__btn-month;
+        background: none;
+        color: #BFBFBF;
+    }
+
+    &__btn-day {
+        padding: 4px 0;
+        margin: 0 10px;
+    }
+
+    &__btn-year {
+        padding: 4px 0;
+    }
+
+    &__btn-more {
+        width: 5px;
+        margin-left: 1em;
+        cursor: pointer;
+
+        &-elem {
+            height: 3px;
+            width: 3px;
+            border-radius: 50%;
+            background-color: #BFBFBF;
+        }
+
+        &-elem:nth-child(2) {
+            margin: 2px 0;
+        }
     }
 }
 
 .revenue {
-    width: 264px;
-    height: 264px;
+    @include flexible(center, center, column, nowrap);
 
-    background-color: $primary-color;
+    width: 264px;
+    margin: 1em;
+    padding: 1em 1em 1.5em 1em;
+
+    background-color: #FFFFFF;
+
+    &__title {
+        @include main-section-title;
+    }
+
+    &__circle-graph {
+        width: 124px;
+        margin: 31px 0 36px 0; 
+    }
+
+    &__revenue__spread {
+        @extend .card__spread;
+    }
 }

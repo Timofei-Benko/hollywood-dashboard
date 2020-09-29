@@ -373,7 +373,7 @@ template {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  background-color: darkcyan;
+  background-color: #ECECEC;
 }
 
 .content {
@@ -431,6 +431,111 @@ p {
   .aside__item {
     font-size: #FD5670;
   }
+}
+
+.nav {
+  background: -webkit-gradient(linear, left bottom, left top, from(#FD5670), to(#EC6E54));
+  background: linear-gradient(to top, #FD5670, #EC6E54);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70px;
+          flex: 0 0 70px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 30px;
+  background: #FFFFFF;
+}
+
+.nav__logo {
+  background: -webkit-gradient(linear, left bottom, left top, from(#FD5670), to(#EC6E54));
+  background: linear-gradient(to top, #FD5670, #EC6E54);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 70px;
+  font-family: 'Deftone Stylus';
+  font-size: 30px;
+  text-align: center;
+}
+
+.nav__list {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 930px;
+          flex: 1 1 930px;
+}
+
+.nav__list .nav__link {
+  display: block;
+  width: 70px;
+  padding-top: 30px;
+  margin-bottom: 30px;
+  font-size: 10px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.nav__list .nav__link:hover::after,
+.nav__list .nav__link:active::after {
+  position: absolute;
+  right: -5px;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 5px solid #FD725D;
+  border-bottom: 10px solid transparent;
+}
+
+.nav__list .nav__link--home {
+  background: url(../img/nav/home.png) no-repeat top;
+}
+
+.nav__list .nav__link--stactics {
+  background: url(../img/nav/stactics.png) no-repeat top;
+}
+
+.nav__list .nav__link--users {
+  background: url(../img/nav/users.png) no-repeat top;
+}
+
+.nav__list .nav__link--settings {
+  background: url(../img/nav/settings.png) no-repeat top;
+}
+
+.nav__list .nav__link--quires {
+  background: url(../img/nav/quires.png) no-repeat top;
+}
+
+.nav__exit {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20px;
+          flex: 0 0 20px;
+  display: block;
+  width: 20px;
+  margin: 20px 0;
+  background: url(../img/nav/power.png);
 }
 
 .header .options {
@@ -700,7 +805,7 @@ p {
   font-size: 20px;
 }
 
-.header .card__spread {
+.header .card__spread, .header .revenue__revenue__spread {
   position: relative;
   margin-top: 3px;
 }
@@ -750,9 +855,8 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: 1em;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .monthly-progress {
@@ -765,128 +869,147 @@ p {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  background-color: #FFFFFF;
-}
-
-.monthly-progress__graph {
-  width: 582px;
-}
-
-.revenue {
-  width: 264px;
-  height: 264px;
-  background-color: #FD5670;
-}
-
-.nav {
-  background: -webkit-gradient(linear, left bottom, left top, from(#FD5670), to(#EC6E54));
-  background: linear-gradient(to top, #FD5670, #EC6E54);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin: 1em;
+  background-color: #FFFFFF;
 }
 
-.nav__home {
+.monthly-progress__header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 70px;
-          flex: 0 0 70px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 100%;
+  padding: 1em 1em 1.5em 1em;
+}
+
+.monthly-progress__title {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 0.7em;
+  font-weight: 400;
+  color: #767676;
+  text-transform: capitalize;
+}
+
+.monthly-progress__settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.monthly-progress__graph {
+  width: 582px;
+  padding: 1em 1em 1.5em 1em;
+  overflow-x: scroll;
+}
+
+.monthly-progress__btn-month, .monthly-progress__btn-day, .monthly-progress__btn-year {
+  background: -webkit-gradient(linear, left top, right top, from(#FD5670), to(#EC6E54));
+  background: linear-gradient(to right, #FD5670, #EC6E54);
+  border: none;
+  border-radius: 30px;
+  color: #FFFFFF;
+  padding: 4px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.monthly-progress__btn-day, .monthly-progress__btn-year {
+  background: none;
+  color: #BFBFBF;
+}
+
+.monthly-progress__btn-day {
+  padding: 4px 0;
+  margin: 0 10px;
+}
+
+.monthly-progress__btn-year {
+  padding: 4px 0;
+}
+
+.monthly-progress__btn-more {
+  width: 5px;
+  margin-left: 1em;
+  cursor: pointer;
+}
+
+.monthly-progress__btn-more-elem {
+  height: 3px;
+  width: 3px;
+  border-radius: 50%;
+  background-color: #BFBFBF;
+}
+
+.monthly-progress__btn-more-elem:nth-child(2) {
+  margin: 2px 0;
+}
+
+.revenue {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 70px;
-  height: 70px;
-  margin-bottom: 30px;
-  background: #FFFFFF;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 264px;
+  margin: 1em;
+  padding: 1em 1em 1.5em 1em;
+  background-color: #FFFFFF;
 }
 
-.nav__logo {
-  background: -webkit-gradient(linear, left bottom, left top, from(#FD5670), to(#EC6E54));
-  background: linear-gradient(to top, #FD5670, #EC6E54);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: 70px;
-  font-family: 'Deftone Stylus';
-  font-size: 30px;
-  text-align: center;
+.revenue__title {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 0.7em;
+  font-weight: 400;
+  color: #767676;
+  text-transform: capitalize;
 }
 
-.nav__list {
-  position: relative;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 930px;
-          flex: 1 1 930px;
-}
-
-.nav__list .nav__link {
-  display: block;
-  width: 70px;
-  padding-top: 30px;
-  margin-bottom: 30px;
-  font-size: 10px;
-  text-align: center;
-  color: #FFFFFF;
-}
-
-.nav__list .nav__link:hover::after,
-.nav__list .nav__link:active::after {
-  position: absolute;
-  right: -5px;
-  content: "";
-  width: 0;
-  height: 0;
-  border-top: 10px solid transparent;
-  border-left: 5px solid #FD725D;
-  border-bottom: 10px solid transparent;
-}
-
-.nav__list .nav__link--home {
-  background: url(../img/nav/home.png) no-repeat top;
-}
-
-.nav__list .nav__link--stactics {
-  background: url(../img/nav/stactics.png) no-repeat top;
-}
-
-.nav__list .nav__link--users {
-  background: url(../img/nav/users.png) no-repeat top;
-}
-
-.nav__list .nav__link--settings {
-  background: url(../img/nav/settings.png) no-repeat top;
-}
-
-.nav__list .nav__link--quires {
-  background: url(../img/nav/quires.png) no-repeat top;
-}
-
-.nav__exit {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 20px;
-          flex: 0 0 20px;
-  display: block;
-  width: 20px;
-  margin: 20px 0;
-  background: url(../img/nav/power.png);
+.revenue__circle-graph {
+  width: 124px;
+  margin: 31px 0 36px 0;
 }
 
 @font-face {
