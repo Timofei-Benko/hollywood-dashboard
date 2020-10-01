@@ -1,6 +1,7 @@
 .content {
     @include flexible(space-between, flex-start, row, wrap);    
-    flex: 1 1.5 1030px;    
+    flex: 1 1.5 1030px;
+    padding: 0.5em;    
 }
 
 // Monthly Progress **************************************************
@@ -10,13 +11,13 @@
     flex: 5 5 400px;
 
     width: 704px;
-    margin: 1em 1em 0 1em;
+    margin: 0.5em;
     background-color: #FFFFFF;
 
     &__header {
         @include flexible(space-between, center, row, nowrap);
         width: 100%;
-        padding: 1em 1em 1.5em 1em;
+        padding: 2em 2em 1.5em 2em;
     }
 
     &__title {
@@ -29,7 +30,7 @@
 
     &__graph {
         width: 582px;
-        padding: 1em;
+        padding: 2em;
         overflow-x: scroll;
     }
 
@@ -91,8 +92,8 @@
     @include flexible(center, center, column, nowrap);
 
     width: 264px;
-    margin: 1em 1em 1em 0;
-    padding: 1em;
+    margin: 0.5em;
+    padding: 2em 2em 2em 2em;
 
     background-color: #FFFFFF;
 
@@ -107,12 +108,11 @@
 
     &__spread {  //try to @extend these
         position: relative;
-        //margin-bottom: 10px;
+        margin-bottom: 8px;
     }
 
     &__buy-value,
     &__sell-value {
-      margin-bottom: 8px;
       font-size: 12px;
       color: #BFBFBF;
     }
@@ -154,10 +154,9 @@
     flex: 1 1 370px;
 
     width: 467px;
-    height: 508px;
-    margin: 0 1em 1em 1em;
-    padding: 1em 1em 1em 1em;
-
+    height: 495px;
+    margin: 0.5em;
+    padding: 2em;
     background-color: #FFFFFF;
 
     overflow-y: scroll;
@@ -243,8 +242,9 @@
     @include flexible (flex-start, flex-start, column, nowrap);
 
     width: 501px;
-    margin: 0 1em 1em 0;
-    padding: 1em 0 1em 1em;
+    height: 245px;
+    margin: 0.5em;
+    padding: 2em 0 2em 2em;
 
     background-color: #FFFFFF;
 
@@ -398,14 +398,36 @@
     @include flexible(center, center, column, nowrap);
 
     width: 241px;
-    background-color: #fff;
+    margin: 0.5em;
+    padding: 2em 0 1em 0; 
+    background-color: #FFFFFF;
 
     &__title {
         @include main-section-title;
+        margin-bottom: 2em;
     }
 
     &__graph {
         width: 144px;
+        margin-bottom: 1em;
+    }
+
+    &__spread {
+        @extend .revenue__spread;
+        margin-bottom: 0.3em;
+    }
+
+    &__amount {
+        @include text-gradient-secondary(to right);
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    &__buy-value {
+        @extend .revenue__buy-value;
     }
     
+    &__sell-value {
+        @extend .revenue__sell-value;
+    }
 }

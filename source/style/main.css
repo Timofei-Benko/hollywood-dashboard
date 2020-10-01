@@ -867,6 +867,7 @@ p {
   -webkit-box-flex: 1;
       -ms-flex: 1 1.5 1030px;
           flex: 1 1.5 1030px;
+  padding: 0.5em;
 }
 
 .monthly-progress {
@@ -889,7 +890,7 @@ p {
       -ms-flex: 5 5 400px;
           flex: 5 5 400px;
   width: 704px;
-  margin: 1em 1em 0 1em;
+  margin: 0.5em;
   background-color: #FFFFFF;
 }
 
@@ -910,7 +911,7 @@ p {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   width: 100%;
-  padding: 1em 1em 1.5em 1em;
+  padding: 2em 2em 1.5em 2em;
 }
 
 .monthly-progress__title {
@@ -941,7 +942,7 @@ p {
 
 .monthly-progress__graph {
   width: 582px;
-  padding: 1em;
+  padding: 2em;
   overflow-x: scroll;
 }
 
@@ -1008,8 +1009,8 @@ p {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   width: 264px;
-  margin: 1em 1em 1em 0;
-  padding: 1em;
+  margin: 0.5em;
+  padding: 2em 2em 2em 2em;
   background-color: #FFFFFF;
 }
 
@@ -1026,17 +1027,17 @@ p {
   margin: 31px 0 18px 0;
 }
 
-.revenue__spread {
+.revenue__spread, .progress__spread {
   position: relative;
+  margin-bottom: 8px;
 }
 
-.revenue__buy-value, .revenue__sell-value {
-  margin-bottom: 8px;
+.revenue__buy-value, .progress__buy-value, .revenue__sell-value, .progress__sell-value {
   font-size: 12px;
   color: #BFBFBF;
 }
 
-.revenue__buy-value::before {
+.revenue__buy-value::before, .progress__buy-value::before {
   content: "";
   position: relative;
   bottom: 8px;
@@ -1048,7 +1049,7 @@ p {
   border-bottom: 6px solid #A889E9;
 }
 
-.revenue__sell-value::before {
+.revenue__sell-value::before, .progress__sell-value::before {
   content: "";
   position: relative;
   top: 10px;
@@ -1081,9 +1082,9 @@ p {
       -ms-flex: 1 1 370px;
           flex: 1 1 370px;
   width: 467px;
-  height: 508px;
-  margin: 0 1em 1em 1em;
-  padding: 1em 1em 1em 1em;
+  height: 495px;
+  margin: 0.5em;
+  padding: 2em;
   background-color: #FFFFFF;
   overflow-y: scroll;
 }
@@ -1222,8 +1223,9 @@ p {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   width: 501px;
-  margin: 0 1em 1em 0;
-  padding: 1em 0 1em 1em;
+  height: 245px;
+  margin: 0.5em;
+  padding: 2em 0 2em 2em;
   background-color: #FFFFFF;
   /* сustomize the label */
   /* browser's default checkbox style reset */
@@ -1419,7 +1421,9 @@ p {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   width: 241px;
-  background-color: #fff;
+  margin: 0.5em;
+  padding: 2em 0 1em 0;
+  background-color: #FFFFFF;
 }
 
 .progress__title {
@@ -1428,10 +1432,26 @@ p {
   font-weight: 700;
   color: #767676;
   text-transform: capitalize;
+  margin-bottom: 2em;
 }
 
 .progress__graph {
   width: 144px;
+  margin-bottom: 1em;
+}
+
+.progress__spread {
+  margin-bottom: 0.3em;
+}
+
+.progress__amount {
+  background: -webkit-gradient(linear, left top, right top, from(#708AE6), to(#8841AF));
+  background: linear-gradient(to right, #708AE6, #8841AF);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 @font-face {
