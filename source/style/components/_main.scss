@@ -392,12 +392,18 @@
     } 
 }
 
+// **********************************************************
+
+.shipments-progress-container {
+    @include flexible (space-between, center, row, nowrap);
+}
+
 // Progress **************************************************
 
 .progress {
     @include flexible(center, center, column, nowrap);
 
-    width: 241px;
+    width: 213px;
     margin: 0.5em;
     padding: 2em 0 1em 0; 
     background-color: #FFFFFF;
@@ -429,5 +435,40 @@
     
     &__sell-value {
         @extend .revenue__sell-value;
+    }
+}
+
+// Shipments **************************************************
+
+.shipments {
+    @extend .progress;
+
+    &__title {
+        @extend .progress__title;
+    }
+
+    &__map {
+        width: 187px;
+    }
+
+    &__spread {
+        @include flexible(space-between, flex-end, row, nowrap);
+        width: 80%;
+        margin-bottom: 0.6em;
+    }
+
+    &__amount {
+        @include text-gradient(to right);
+        @extend .progress__amount;
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    &__buy-value {
+        @extend .progress__buy-value;
+    }
+
+    &__sell-value {
+        @extend .progress__sell-value;
     }
 }
