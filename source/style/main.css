@@ -1320,7 +1320,7 @@ p {
 }
 
 .todays-task .container input:not(:checked) ~ .checkmark {
-  background-color: grey;
+  background-color: #BFBFBF;
   opacity: 1;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -1350,14 +1350,13 @@ p {
 }
 
 .todays-task .container .checkmark:after {
-  left: 3px;
+  left: 2px;
   top: 3px;
-  width: 11px;
-  height: 11px;
+  width: 13px;
+  height: 13px;
   background-color: #FFFFFF;
-  border-radius: 50%;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-clip-path: polygon(21% 40%, 21% 40%, 8% 54%, 25% 68%, 36% 77%, 47% 65%, 48% 64%, 64% 47%, 75% 35%, 93% 13%, 81% 4%, 36% 54%);
+          clip-path: polygon(21% 40%, 21% 40%, 8% 54%, 25% 68%, 36% 77%, 47% 65%, 48% 64%, 64% 47%, 75% 35%, 93% 13%, 81% 4%, 36% 54%);
 }
 
 .todays-task__clock-icon {
@@ -1401,6 +1400,38 @@ p {
 
 .todays-task__clock-icon:not(:nth-child(1)) {
   margin-top: 26px;
+}
+
+.progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 241px;
+  background-color: #fff;
+}
+
+.progress__title {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 0.7em;
+  font-weight: 700;
+  color: #767676;
+  text-transform: capitalize;
+}
+
+.progress__graph {
+  width: 144px;
 }
 
 @font-face {
