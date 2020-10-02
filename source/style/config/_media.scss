@@ -123,3 +123,9 @@
         margin-bottom: 1em;
     }
 }
+
+@media screen and (max-width: 380px) {
+    .todays-task .container .descr {
+        white-space: unset;
+    }
+}
