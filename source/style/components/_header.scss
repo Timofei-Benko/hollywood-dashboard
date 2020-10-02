@@ -2,6 +2,7 @@
 
   .options {
     display: flex;
+    overflow: scroll;
     
     &__item {
       display: flex;
@@ -185,8 +186,8 @@
     }
   }
 
-  // Stactics ************************************
-  .stactics {
+  // statistics ************************************
+  .statistics {
     display: flex;
     align-items: center;
     padding-left: 45px;
