@@ -1,0 +1,36 @@
+@media screen and (max-width: 1211px) {
+    .customers-feed {
+        height: 275px;
+        flex: 2 2 auto;
+    }
+
+    .todays-task {
+        align-items: center;
+    }
+
+    .page {
+        flex-direction: column;
+    }
+
+    .main-container  {
+        margin-left: 0;
+    }
+
+    .nav {
+        position: initial;
+        height: 70px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 949px) {
+
+    .statistics {
+        overflow-x: scroll;
+    }
+
+    .card {
+        white-space: nowrap;;
+    }
+
+}

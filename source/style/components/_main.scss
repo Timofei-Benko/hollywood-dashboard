@@ -1,3 +1,11 @@
+html {
+    background: #EDEDED;
+}
+
+.main {
+    display: flex;
+}
+
 .content {
     @include flexible(space-between, flex-start, row, wrap);    
     flex: 1 1.5 1030px;
@@ -10,7 +18,6 @@
     @include flexible(center, flex-start, column, nowrap);
     flex: 5 5 400px;
 
-    width: 704px;
     margin: 0.5em;
     background-color: #FFFFFF;
 
@@ -90,8 +97,8 @@
 
 .revenue {
     @include flexible(center, center, column, nowrap);
+    flex: 1 1 265px;
 
-    width: 264px;
     margin: 0.5em;
     padding: 2em 2em 2em 2em;
 
@@ -153,7 +160,6 @@
     @include flexible(flex-start, flex-start, column, nowrap);
     flex: 1 1 370px;
 
-    width: 467px;
     height: 495px;
     margin: 0.5em;
     padding: 2em;
@@ -240,8 +246,8 @@
 
 .todays-task {
     @include flexible (flex-start, flex-start, column, nowrap);
+    flex: 1 1 370px;
 
-    width: 501px;
     height: 245px;
     margin: 0.5em;
     padding: 2em 0 2em 2em;
@@ -396,16 +402,17 @@
 
 .shipments-progress-container {
     @include flexible (space-between, center, row, nowrap);
+    flex: 1 1 auto;
+    margin: 0.5em;
 }
 
 // Progress **************************************************
 
 .progress {
     @include flexible(center, center, column, nowrap);
-
-    width: 213px;
-    margin: 0.5em;
-    padding: 2em 0 1em 0; 
+    flex: 2 2 auto;
+    margin-right: 0.5em;
+    padding: 2em 2em 1em 2em; 
     background-color: #FFFFFF;
 
     &__title {
@@ -442,6 +449,9 @@
 
 .shipments {
     @extend .progress;
+    flex: 1 1 auto;
+    margin-left: 0.5em;
+    padding: 1.5em 1em;
 
     &__title {
         @extend .progress__title;
@@ -453,7 +463,7 @@
 
     &__spread {
         @include flexible(space-between, flex-end, row, nowrap);
-        width: 80%;
+        width: 100%;
         margin-bottom: 0.6em;
     }
 
@@ -471,4 +481,11 @@
     &__sell-value {
         @extend .progress__sell-value;
     }
+}
+
+.aside {
+   flex-basis: 270px;
+   min-width: 170px;
+   min-height: 250px;
+   background-color: teal; 
 }

@@ -376,10 +376,11 @@ template {
   background-color: crimson;
 }
 
-.container {
+.main-container {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  margin-left: 70px;
   background-color: #ECECEC;
 }
 
@@ -443,6 +444,7 @@ p {
 .nav {
   background: -webkit-gradient(linear, left bottom, left top, from(#FD5670), to(#EC6E54));
   background: linear-gradient(to top, #FD5670, #EC6E54);
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -848,6 +850,16 @@ p {
   border-top: 6px solid #FD5670;
 }
 
+html {
+  background: #EDEDED;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -889,7 +901,6 @@ p {
   -webkit-box-flex: 5;
       -ms-flex: 5 5 400px;
           flex: 5 5 400px;
-  width: 704px;
   margin: 0.5em;
   background-color: #FFFFFF;
 }
@@ -1008,7 +1019,9 @@ p {
           flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  width: 264px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 265px;
+          flex: 1 1 265px;
   margin: 0.5em;
   padding: 2em 2em 2em 2em;
   background-color: #FFFFFF;
@@ -1081,7 +1094,6 @@ p {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 370px;
           flex: 1 1 370px;
-  width: 467px;
   height: 495px;
   margin: 0.5em;
   padding: 2em;
@@ -1222,7 +1234,9 @@ p {
           flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  width: 501px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 370px;
+          flex: 1 1 370px;
   height: 245px;
   margin: 0.5em;
   padding: 2em 0 2em 2em;
@@ -1420,6 +1434,10 @@ p {
           flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin: 0.5em;
 }
 
 .progress, .shipments {
@@ -1438,9 +1456,11 @@ p {
           flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  width: 213px;
-  margin: 0.5em;
-  padding: 2em 0 1em 0;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 2 auto;
+          flex: 2 2 auto;
+  margin-right: 0.5em;
+  padding: 2em 2em 1em 2em;
   background-color: #FFFFFF;
 }
 
@@ -1472,6 +1492,14 @@ p {
   font-weight: 700;
 }
 
+.shipments {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin-left: 0.5em;
+  padding: 1.5em 1em;
+}
+
 .shipments__map {
   width: 187px;
 }
@@ -1492,7 +1520,7 @@ p {
           flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  width: 80%;
+  width: 100%;
   margin-bottom: 0.6em;
 }
 
@@ -1506,10 +1534,55 @@ p {
   margin: 0 auto;
 }
 
+.aside {
+  -ms-flex-preferred-size: 270px;
+      flex-basis: 270px;
+  min-width: 170px;
+  min-height: 250px;
+  background-color: teal;
+}
+
 @font-face {
   font-family: 'Deftone Stylus';
   src: url(../fonts/deftone-stylus.ttf);
   font-weight: regular;
   font-style: normal;
+}
+
+@media screen and (max-width: 1211px) {
+  .customers-feed {
+    height: 275px;
+    -webkit-box-flex: 2;
+        -ms-flex: 2 2 auto;
+            flex: 2 2 auto;
+  }
+  .todays-task {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main-container {
+    margin-left: 0;
+  }
+  .nav {
+    position: initial;
+    height: 70px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 949px) {
+  .statistics {
+    overflow-x: scroll;
+  }
+  .card {
+    white-space: nowrap;
+  }
 }
 /*# sourceMappingURL=main.css.map */
