@@ -521,8 +521,8 @@ p {
   background: url(../img/nav/home.png) no-repeat top;
 }
 
-.nav__list .nav__link--stactics {
-  background: url(../img/nav/stactics.png) no-repeat top;
+.nav__list .nav__link--statistics {
+  background: url(../img/nav/statistics.png) no-repeat top;
 }
 
 .nav__list .nav__link--users {
@@ -551,6 +551,7 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: scroll;
 }
 
 .header .options__item {
@@ -751,7 +752,7 @@ p {
   background: #BFBFBF;
 }
 
-.header .stactics {
+.header .statistics {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -763,7 +764,7 @@ p {
   background-color: #fff;
 }
 
-.header .stactics__list {
+.header .statistics__list {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -776,7 +777,7 @@ p {
   padding: 22px 0;
 }
 
-.header .stactics__add-card {
+.header .statistics__add-card {
   background: -webkit-gradient(linear, left top, right top, from(#FD5670), to(#EC6E54));
   background: linear-gradient(to right, #FD5670, #EC6E54);
   background-clip: text;
@@ -1456,11 +1457,11 @@ html {
           flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  -webkit-box-flex: 2;
-      -ms-flex: 2 2 auto;
-          flex: 2 2 auto;
+  -webkit-box-flex: 3;
+      -ms-flex: 3 3 auto;
+          flex: 3 3 auto;
   margin-right: 0.5em;
-  padding: 2em 2em 1em 2em;
+  padding: 2em 2em 1.3em 2em;
   background-color: #FFFFFF;
 }
 
@@ -1474,7 +1475,7 @@ html {
 }
 
 .progress__graph {
-  width: 144px;
+  width: 140px;
   margin-bottom: 1em;
 }
 
@@ -1497,7 +1498,7 @@ html {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   margin-left: 0.5em;
-  padding: 1.5em 1em;
+  padding: 1.6em 1.3em;
 }
 
 .shipments__map {
@@ -1539,7 +1540,7 @@ html {
       flex-basis: 270px;
   min-width: 170px;
   min-height: 250px;
-  background-color: teal;
+  background-color: #008080;
 }
 
 @font-face {
@@ -1572,17 +1573,114 @@ html {
   }
   .nav {
     position: initial;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     height: 70px;
     width: 100%;
+  }
+  .nav__home {
+    margin-bottom: 0;
+  }
+  .nav__list,
+  .nav__exit {
+    display: none;
+  }
+  .nav__burger {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin-right: 30px;
+    background-color: #fff;
+  }
+  .nav__burger::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+  }
+  .nav__burger::before {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+  }
+  .shipments__spread {
+    width: 50%;
+  }
+  .shipments__amount {
+    margin: 0;
   }
 }
 
 @media screen and (max-width: 949px) {
   .statistics {
-    overflow-x: scroll;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header .statistics__add-card {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    margin-bottom: 1em;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .statistics__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .card {
-    white-space: nowrap;
+    margin-bottom: 1em;
+  }
+  .header .statistics__add-card {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .monthly-progress {
+    overflow-x: scroll;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .todays-task {
+    overflow-x: scroll;
+  }
+  .shipments-progress-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .progress, .shipments {
+    width: 100%;
+    margin-bottom: 1em;
   }
 }
 /*# sourceMappingURL=main.css.map */
