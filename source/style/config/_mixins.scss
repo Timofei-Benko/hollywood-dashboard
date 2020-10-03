@@ -52,6 +52,13 @@
 
 
 // Media
+// Extra Small devices
+@mixin xs {
+  @media (max-width: #{$screen-xs-max}) {
+      @content;
+  }
+}
+
 // Small devices
 @mixin sm {
   @media (max-width: #{$screen-sm-max}) {
@@ -69,13 +76,6 @@
 // Large devices
 @mixin lg {
   @media (max-width: #{$screen-lg-max}) {
-      @content;
-  }
-}
-
-// Extra large devices
-@mixin xl {
-  @media (max-width: #{$screen-xl-max}) {
       @content;
   }
 }
