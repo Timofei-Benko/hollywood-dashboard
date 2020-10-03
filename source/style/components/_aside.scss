@@ -6,9 +6,9 @@
   max-height: 830px;
   background: #FFFFFF;
 
-  @include sm {
-    flex: 0 1 768px;
-    max-width: 768px;
+  @include md {
+    order: 1;
+    max-width: 1000px;
   }
   
 }

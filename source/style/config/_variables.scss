@@ -11,14 +11,14 @@ $purple: #8841AF;
 $maxWidth: 1370; //for adaptive font-size
 
 // MEDIA
+// Less than "sm"
+$screen-xs-max: 576px;
+
 // Small tablets and large smartphones (landscape view)
-$screen-sm-max: 576px;
+$screen-sm-max: 768px;
 
 // Small tablets (portrait view)
-$screen-md-max: 768px;
+$screen-md-max: 992px;
 
 // Tablets and small desktops
-$screen-lg-max: 992px;
-
-// Large tablets and desktops
-$screen-xl-max: 1200px;
+$screen-lg-max: 1200px;

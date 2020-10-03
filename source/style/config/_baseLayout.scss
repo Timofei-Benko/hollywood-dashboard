@@ -1,5 +1,6 @@
 .page {
   display: flex;
+  flex-direction: column;
 
   max-width: 1370px;
   height: 1000px;
@@ -15,9 +16,12 @@
 }
 
 .main-container {
-  flex-grow: 1;
+  @include sm {
+    margin-left: 0;
+  }
+
+  flex: auto;
   margin-left: 70px;
-  background-color: #ECECEC;
 }
 
 .content {

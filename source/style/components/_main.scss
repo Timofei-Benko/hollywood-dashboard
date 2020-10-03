@@ -4,12 +4,20 @@ html {
 
 .main {
     display: flex;
+    @include md {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
 }
 
 .content {
     @include flexible(space-between, flex-start, row, wrap);    
     flex: 1 1.5 1030px;
     padding: 0.5em;    
+
+    @include md {
+        order: 2;
+    }
 }
 
 // Monthly Progress **************************************************
@@ -20,6 +28,8 @@ html {
 
     margin: 0.5em;
     background-color: #FFFFFF;
+
+    overflow-x: scroll;
 
     &__header {
         @include flexible(space-between, center, row, nowrap);
