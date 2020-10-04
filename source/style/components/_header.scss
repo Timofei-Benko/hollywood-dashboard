@@ -49,12 +49,12 @@
       }
 
       .options__button--search {
+        display: none;
+        background: url(../img/header/search-gradient.png) no-repeat center;
+
         @include md {
           display: block;
         }
-
-        display: none;
-        background: url(../img/header/search-gradient.png) no-repeat center;
       }
 
       .options__button--upload {

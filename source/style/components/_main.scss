@@ -247,9 +247,12 @@ html {
 
 .wrapper {
     @include flexible (center, center, row, wrap);
-    flex: 1 1 300px;
+    flex: 1 1 370px;
 
-    overflow-y: scroll;
+    @include lg {
+        flex: auto;
+        width: 100%;
+    }
 }
 
 // Todays Task **************************************************
@@ -264,6 +267,13 @@ html {
 
     background-color: #FFFFFF;
 
+    overflow-x: scroll;
+
+    @include lg {
+        width: 100%;
+        flex: auto;
+    }
+
     &__title {
         @include main-section-title;
     }
@@ -274,6 +284,10 @@ html {
         height: 213px;
         margin-top: 30px;
         overflow-y: scroll;
+
+        @include lg {
+            margin: 30px auto 0 auto;
+        }
     }
 
     /* сustomize the label */
@@ -414,16 +428,29 @@ html {
     @include flexible (space-between, center, row, nowrap);
     flex: 1 1 auto;
     margin: 0.5em;
+
+    @include sm {
+        flex-direction: column;
+        width: 100%;
+    }
 }
 
 // Progress **************************************************
 
 .progress {
     @include flexible(center, center, column, nowrap);
-    flex: 3 3 auto;
+    flex: 1 1 auto;
     margin-right: 0.5em;
-    padding: 2em 2em 1.3em 2em; 
+    padding: 2em 2em 1.2em 2em; 
     background-color: #FFFFFF;
+
+    @include lg {
+        width: 100%;
+    }
+
+    @include sm {
+        margin: 0 0 1em 0;
+    }
 
     &__title {
         @include main-section-title;
@@ -459,20 +486,23 @@ html {
 
 .shipments {
     @extend .progress;
-    flex: 1 1 auto;
-    margin-left: 0.5em;
-    padding: 1.6em 1.3em;
+    margin: 0 0 0 0.5em;
+    padding: 2em 2em 1.4em 2em; 
+
+    @include sm {
+        margin: 0;
+    }
 
     &__title {
         @extend .progress__title;
     }
 
     &__map {
-        width: 187px;
+        width: 180px;
     }
 
     &__spread {
-        @include flexible(space-between, flex-end, row, nowrap);
+        @include flexible(center, flex-end, row, nowrap);
         width: 100%;
         margin-bottom: 0.6em;
     }
@@ -481,7 +511,7 @@ html {
         @include text-gradient(to right);
         @extend .progress__amount;
         display: inline-block;
-        margin: 0 auto;
+        margin-right: 0.3em;
     }
 
     &__buy-value {

@@ -6,6 +6,10 @@
   max-height: 830px;
   background: #FFFFFF;
 
+  @include lg {
+    max-height: 100%;
+  }
+
   @include md {
     order: 1;
     max-width: 1000px;
