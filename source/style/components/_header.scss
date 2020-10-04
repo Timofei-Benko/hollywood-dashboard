@@ -1,4 +1,4 @@
-.header{
+.header {
 
   .options {
     display: flex;
@@ -10,8 +10,7 @@
       height: 70px;
 
       border-left: 2px solid #F1F1F1;
-      background-color: #fff; //         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
+      background-color: #FFFFFF; 
 
       @include xs {
         flex-shrink: 1;
@@ -26,7 +25,7 @@
       .options__button {
         width: 59px;
 
-        background: url(../../img/) transparent;
+        background: transparent;
         border: none;
         outline: none;
         cursor: pointer;
@@ -242,7 +241,7 @@
     padding-left: 45px;
 
     border-top: 2px solid #F1F1F1;
-    background-color: #FFFFFF; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    background-color: #FFFFFF;
     overflow-x: scroll;
     z-index: 0;
 
@@ -276,7 +275,6 @@
     margin-right: 20px;
 
     font-weight: bold;
-
     list-style-type: none;
 
     &__title {
@@ -288,22 +286,18 @@
 
     &__amount {
       @include text-gradient(to right);
-
       font-size: 20px;
     }
 
     &__spread {
       position: relative;
-
       margin-top: 3px;
     }
 
     &__buy-value,
     &__sell-value {
       margin-bottom: 8px;
-
       font-size: 12px;
-
       color: #BFBFBF;
     }
 

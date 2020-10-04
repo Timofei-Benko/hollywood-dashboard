@@ -53,9 +53,7 @@ html {
 
     &__btn-month {
          display: block;
-
          padding: 4px 12px;
-        
          border: none;
          border-radius: 30px;
          @include background-gradient (to right);
@@ -108,7 +106,6 @@ html {
 .revenue {
     @include flexible(center, center, column, nowrap);
     flex: 1 1 265px;
-
     margin: 0.5em;
     padding: 2em 2em 2em 2em;
 
@@ -169,7 +166,6 @@ html {
 .customers-feed {
     @include flexible(flex-start, flex-start, column, nowrap);
     flex: 1 1 370px;
-
     height: 495px;
     margin: 0.5em;
     padding: 2em;
@@ -183,7 +179,6 @@ html {
 
     &__actor {
         @include flexible(space-between, flex-start, row, nowrap);
-
         margin: 2em 0 0 0;
     }
 
@@ -260,13 +255,11 @@ html {
 .todays-task {
     @include flexible (flex-start, flex-start, column, nowrap);
     flex: 1 1 370px;
-
     height: 245px;
     margin: 0.5em;
     padding: 2em 0 2em 2em;
 
     background-color: #FFFFFF;
-
     overflow-x: scroll;
 
     @include lg {
@@ -297,10 +290,11 @@ html {
         position: relative;
         padding-left: 35px;
         margin-bottom: 25px;
-        cursor: pointer;
-        font-size: 12px;
-        user-select: none;
+
         background-color: #FFFFFF;
+        font-size: 12px;
+        cursor: pointer;
+        user-select: none;
     }
     
     .container .task {
@@ -314,7 +308,7 @@ html {
         margin-right: 5px;
         color: #BFBFBF;
         white-space: nowrap;
-        }
+    }
 
     /* browser's default checkbox style reset */
     .container input {
@@ -422,7 +416,7 @@ html {
     } 
 }
 
-// **********************************************************
+// SnP Container **********************************************************
 
 .shipments-progress-container {
     @include flexible (space-between, center, row, nowrap);
@@ -522,6 +516,3 @@ html {
         @extend .progress__sell-value;
     }
 }
-
-// Aside Placeholder **************************************************
-
