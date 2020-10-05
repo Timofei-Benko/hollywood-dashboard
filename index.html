@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,60 +9,48 @@
   <title>Hollywood Dashboard</title>
 </head>
 <body>
-
   <div class="page">
-
     <nav class="nav">
       <a class="nav__home" href="#">
         <span class="nav__logo">W</span>
       </a>
       <div class="nav__list">
         <a class="nav__link nav__link--home" href="#">Home</a>
-        <a class="nav__link nav__link--stactics" href="#">Stactics</a>
+        <a class="nav__link nav__link--statistics" href="#">Statistics</a>
         <a class="nav__link nav__link--users" href="#">Users</a>
         <a class="nav__link nav__link--settings" href="#">Settings</a>
         <a class="nav__link nav__link--quires" href="#">Quires</a>
       </div>
       <a class="nav__exit" href="#"></a>
+            <div class="nav__burger"></div>
     </nav> <!-- Nav -->
-
-    <div class="container">
-
+    <div class="main-container">
       <header class="header">
-
         <ul class="options">
-          
           <li class="options__item">
             <button class="options__button options__button--more"></button>
           </li>
-
           <li class="options__item">
             <button class="options__button options__button--folder"></button>
           </li>
-          
           <li class="options__item">
             <button class="options__button options__button--settings"></button>
           </li>
-          
           <li class="options__item options__item--search">
             <div class="search">
               <input class="search__input" type="search" name="search" placeholder="Search Anything Here....">
               <button class="search__submit" type="submit"></button>
             </div>
           </li>
-          
           <li class="options__item">
             <button class="options__button options__button--upload"></button>
           </li>
-          
           <li class="options__item">
             <button class="options__button options__button--envelope"></button>
           </li>
-          
           <li class="options__item">
             <button class="options__button options__button--planet-earth"></button>
           </li>
-          
           <li class="options__item manager">
             <img class="manager__photo" src="./source/img/header/kendall-jenner.png" alt="Kendall Jenner">
             <div class="manager__about">
@@ -70,12 +59,9 @@
             </div>
             <a class="manager__more-information" href="#"><span></span></a>
           </li>
-        
         </ul> <!-- Header Options -->
-        
-        <div class="stactics">
-          <ul class="stactics__list">
-            
+        <div class="statistics">
+          <ul class="statistics__list">
             <li class="card">
               <h3 class="card__title">Daily Visitors</h3>
               <span class="card__amount">150,0000</span>
@@ -84,7 +70,6 @@
                 <span class="card__sell-value">1020</span>
               </div>
             </li>
-
             <li class="card">
               <h3 class="card__title">Daily Customers</h3>
               <span class="card__amount">120,0000</span>
@@ -93,7 +78,6 @@
                 <span class="card__sell-value">1020</span>
               </div>
             </li>
-
             <li class="card">
               <h3 class="card__title">Daily Orders</h3>
               <span class="card__amount">900,000</span>
@@ -102,7 +86,6 @@
                 <span class="card__sell-value">1020</span>
               </div>
             </li>
-
             <li class="card">
               <h3 class="card__title">Daily Sales</h3>
               <span class="card__amount">850,000</span>
@@ -111,7 +94,6 @@
                 <span class="card__sell-value">1020</span>
               </div>
             </li>
-
             <li class="card">
               <h3 class="card__title">Daily Shipments</h3>
               <span class="card__amount">750,000</span>
@@ -120,7 +102,6 @@
                 <span class="card__sell-value">1020</span>
               </div>
             </li>
-
             <li class="card">
               <h3 class="card__title">Daily Revenue</h3>
               <span class="card__amount">$985,0000</span>
@@ -129,7 +110,6 @@
                 <span class="card__sell-value">1020</span>
               </div>
             </li>
-
             <li class="card">
               <h3 class="card__title">Daily Reviews</h3>
               <span class="card__amount">600,000</span>
@@ -138,44 +118,270 @@
                 <span class="card__sell-value">1020</span>
               </div>
             </li>
-            
           </ul>
-          <button class="stactics__add-card">+  Add Stactics</button>
-        </div> <!-- Header Stactics -->
-      
+          <button class="statistics__add-card">+ Add statistics</button>
+        </div> <!-- Header statistics -->
       </header> <!-- Header -->
-      
-
       <div class="main">
         <div class="content">
           <div class="monthly-progress">
             <div class="monthly-progress__header">
               <h2 class="monthly-progress__title">Monthly revenue progress</h2>
               <div class="monthly-progress__settings">
-                <button class="monthly-progress__btn-month"></button>
-                <button class="monthly-progress__btn-day"></button>
-                <button class="monthly-progress__btn-year"></button>
+                <button class="monthly-progress__btn-month">Month</button>
+                <button class="monthly-progress__btn-day">Day</button>
+                <button class="monthly-progress__btn-year">Year</button>
                 <div class="monthly-progress__btn-more">
                   <div class="monthly-progress__btn-more-elem"></div>
                   <div class="monthly-progress__btn-more-elem"></div>
                   <div class="monthly-progress__btn-more-elem"></div>
                 </div>
               </div>
-              <img src="./source/img/main/graph.png" alt="Monthly revenue progress graph" class="monthly-progress__graph">
             </div>
-          </div> 
-          <div class="revenue"></div>
-          <div class="customers-feed"></div>
-          <div class="box">
-            <div class="todays-task"></div>
-            <div class="pogress"></div>
-            <div class="shipments"></div>
+            <img src="./source/img/main/linear-graph.png" alt="Monthly revenue progress linear graph"
+              class="monthly-progress__graph">
+          </div>
+          <div class="revenue">
+            <h2 class="revenue__title">Revenue per hour</h2>
+            <img src="./source/img/main/circle-graph.png" alt="Revenue per hour circle graph"
+              class="revenue__circle-graph">
+            <div class="revenue__spread">
+              <span class="revenue__buy-value">1020</span>
+              <span class="revenue__sell-value">1020</span>
+            </div>
+          </div>
+          <div class="customers-feed">
+            <h2 class="customers-feed__title">Customers feed</h2>
+            <div class="customers-feed__actor">
+              <div class="customers-feed__actor-photo-container">
+                <img src="./source/img/main/sophie-turner.png" alt="A photo of Sophie Turner"
+                  class="customers-feed__actor-photo">
+                <p class="customers-feed__date">10 min ago</p>
+              </div>
+              <ul class="customers-feed__list">
+                <li class="customers-feed__item"><span>Sophie Turner</span> is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                  when
+                  an</li>
+                <li class="customers-feed__item"><span>Sophie Turner</span> is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                </li>
+                <li class="customers-feed__item"><span>Sophie Turner</span> is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                </li>
+              </ul>
+            </div>
+            <div class="customers-feed__actor">
+              <div class="customers-feed__actor-photo-container">
+                <img src="./source/img/main/peter-quill.png" alt="A photo of Sophie Turner"
+                  class="customers-feed__actor-photo">
+                <p class="customers-feed__date">15 min ago</p>
+              </div>
+              <ul class="customers-feed__list">
+                <li class="customers-feed__item"><span>Peter Quill</span> is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                  when
+                  an</li>
+                <li class="customers-feed__item"><span>Peter Quill</span> is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                </li>
+                <li class="customers-feed__item"><span>Peter Quill</span> is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="wrapper">
+            <div class="todays-task">
+              <h2 class="todays-task__title">Todays task</h2>
+              <div class="tasks-wrapper">
+                <div class="todays-task__checkboxes">
+                  <label class="container">
+                    <span class="task">Arrange</span><span class="descr">simply dummy text of the pr......</span>
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">
+                    <span class="task">Shipment</span><span class="descr">simply dummy text of t......</span>
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">
+                    <span class="task">Make List</span><span class="descr">simply dummy text of t......</span>
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">
+                    <span class="task">Review</span><span class="descr">simply dummy text of th.....</span>
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">
+                    <span class="task">Find Photos</span><span class="descr">simply dummy tex.</span>
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">
+                    <span class="task">Add New Actors</span><span class="descr">simply dummy.</span>
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">
+                    <span class="task">Analyze Stats</span><span class="descr">simply dummy text of the p......</span>
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="todays-task__time-container">
+                  <span class="todays-task__clock-icon"></span>
+                  <span class="todays-task__clock-icon"></span>
+                  <span class="todays-task__clock-icon"></span>
+                  <span class="todays-task__clock-icon"></span>
+                  <span class="todays-task__clock-icon"></span>
+                  <span class="todays-task__clock-icon"></span>
+                  <span class="todays-task__clock-icon"></span>
+                </div>
+              </div>
+            </div>
+            <div class="shipments-progress-container">
+              <div class="progress">
+                <h2 class="progress__title">Progress</h2>
+                <img src="./source/img/main/colon-graph.png" alt="Progress colon graph" class="progress__graph">
+                <span class="progress__amount"></span>
+                <span class="progress__amount">&#36;150,0000</span>
+                <div class="progress__spread">
+                  <span class="progress__buy-value">1020</span>
+                  <span class="progress__sell-value">1020</span>
+                </div>
+              </div>
+              <div class="shipments">
+                <h2 class="shipments__title">Shipments</h2>
+                <img src="./source/img/main/map.png" alt="Map of the shipments locations around the USA"
+                  class="shipments__map">
+                <div class="shipments__spread">
+                  <span class="shipments__amount">&#36;15,000</span>
+                  <span class="shipments__buy-value">1020</span>
+                  <span class="shipments__sell-value">1020</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <aside class="aside"></aside>
+        <aside class="aside">
+          <div class="menu">
+            <div class="menu__btn--users"></div>
+            <div class="menu__btn--chat"></div>
+            <div class="menu__btn--like"></div>
+          </div>
+          <ul class="actors-list">
+            <li class="actors-list__item">
+              <img class="actors-list__photo" src="./source/img/aside/actors/jennifer-lawrence.png" alt="Jennifer Lawrence">
+              <div class="actors-list__about">
+                <a class="actors-list__name" href="#">Kendall Jenner</a>
+                <p class="actors-list__position">Cheif Authority</p>
+              </div>
+              <a class="actors-list__chat" href="#"></a>
+            </li>
+            <li class="actors-list__item">
+              <img class="actors-list__photo" src="./source/img/aside/actors/brad-pitt.png" alt="Brad Pitt">
+              <div class="actors-list__about">
+                <a class="actors-list__name" href="#">Brad Pitt</a>
+                <p class="actors-list__position">Cheif Authority</p>
+              </div>
+              <a class="actors-list__chat" href="#"></a>
+            </li>
+            <li class="actors-list__item">
+              <img class="actors-list__photo" src="./source/img/aside/actors/leonardo-dicaprio.png" alt="Leonardo Dicaprio">
+              <div class="actors-list__about">
+                <a class="actors-list__name" href="#">Leonardo Dicaprio</a>
+                <p class="actors-list__position">Cheif Authority</p>
+              </div>
+              <a class="actors-list__chat" href="#"></a>
+            </li>
+            <li class="actors-list__item">
+              <img class="actors-list__photo" src="./source/img/aside/actors/jesse-eisenberg.png" alt="Jesse Eisenberg">
+              <div class="actors-list__about">
+                <a class="actors-list__name" href="#">Jesse Eisenberg</a>
+                <p class="actors-list__position">Cheif Authority</p>
+              </div>
+              <a class="actors-list__chat" href="#"></a>
+            </li>
+            <li class="actors-list__item">
+              <img class="actors-list__photo" src="./source/img/aside/actors/kristen-stewart.png" alt="Kristen Stewart">
+              <div class="actors-list__about">
+                <a class="actors-list__name" href="#">Kristen Stewart</a>
+                <p class="actors-list__position">Cheif Authority</p>
+              </div>
+              <a class="actors-list__chat" href="#"></a>
+            </li>
+            <li class="actors-list__item">
+              <img class="actors-list__photo" src="./source/img/aside/actors/ben-affleck.png" alt="Ben Affleck">
+              <div class="actors-list__about">
+                <a class="actors-list__name" href="#">Ben Affleck</a>
+                <p class="actors-list__position">Cheif Authority</p>
+              </div>
+              <a class="actors-list__chat" href="#"></a>
+            </li>
+            <li class="actors-list__item">
+              <img class="actors-list__photo" src="./source/img/aside/actors/ben-affleck.png" alt="Ben Affleck">
+              <div class="actors-list__about">
+                <a class="actors-list__name" href="#">Ben Affleck</a>
+                <p class="actors-list__position">Cheif Authority</p>
+              </div>
+              <a class="actors-list__chat" href="#"></a>
+            </li>
+            <li class="actors-list__item">
+              <img class="actors-list__photo" src="./source/img/aside/actors/ben-affleck.png" alt="Ben Affleck">
+              <div class="actors-list__about">
+                <a class="actors-list__name" href="#">Ben Affleck</a>
+                <p class="actors-list__position">Cheif Authority</p>
+              </div>
+              <a class="actors-list__chat" href="#"></a>
+            </li>
+            <li class="actors-list__item">
+              <img class="actors-list__photo" src="./source/img/aside/actors/ben-affleck.png" alt="Ben Affleck">
+              <div class="actors-list__about">
+                <a class="actors-list__name" href="#">Ben Affleck</a>
+                <p class="actors-list__position">Cheif Authority</p>
+              </div>
+              <a class="actors-list__chat" href="#"></a>
+            </li>
+            <li class="actors-list__item">
+              <img class="actors-list__photo" src="./source/img/aside/actors/ben-affleck.png" alt="Ben Affleck">
+              <div class="actors-list__about">
+                <a class="actors-list__name" href="#">Ben Affleck</a>
+                <p class="actors-list__position">Cheif Authority</p>
+              </div>
+              <a class="actors-list__chat" href="#"></a>
+            </li>
+            <li class="actors-list__item">
+              <img class="actors-list__photo" src="./source/img/aside/actors/ben-affleck.png" alt="Ben Affleck">
+              <div class="actors-list__about">
+                <a class="actors-list__name" href="#">Ben Affleck</a>
+                <p class="actors-list__position">Cheif Authority</p>
+              </div>
+              <a class="actors-list__chat" href="#"></a>
+            </li>
+          </ul>
+          <div class="search">
+            <input class="search__input" type="search" name="actors-search" id="actors-search" placeholder="Search peoples, chats and reviews">
+            <input class="search__submit" type="submit" value="">
+            <button class="search__edit"></button>
+          </div>
+          <div class="featured-companies">
+            <h2 class="featured-companies__title">Featured companys</h2>
+            <ul class="featured-companies__list">
+              <li class="featured-companies__link--rdio"></li>
+              <li class="featured-companies__link--css3"></li>
+              <li class="featured-companies__link--deviantart"></li>
+              <li class="featured-companies__link--xing"></li>
+              <li class="featured-companies__link--vimeo"></li>
+              <li class="featured-companies__link--vk"></li>
+            </ul>
+          </div>
+        </aside> <!-- Aside -->
+      </div> <!-- Main -->
     </div>
-
   </div>
-
 </body>
 </html>

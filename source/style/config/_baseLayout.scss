@@ -1,31 +1,29 @@
 .page {
   display: flex;
+  flex-direction: column;
 
   max-width: 1370px;
   height: 1000px;
   margin: 0 auto;
 
   font-family: 'Lato', Arial, Helvetica, sans-serif;
-  background-color: bisque;
 }
 
 .nav {
   width: 70px;
   height: 1000px;
   
-  background-color: crimson;
 }
 
-.container {
-  flex-grow: 1;
+.main-container {
+  @include sm {
+    margin-left: 0;
+  }
 
-  background-color: darkcyan;
+  flex: auto;
+  margin-left: 70px;
 }
 
 .content {
   max-width: 1021px; 
 }
-
-// .container--inner {
-
-// }

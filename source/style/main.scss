@@ -5,27 +5,17 @@
 
 @import './components/aside';
 @import './components/footer';
+@import './components/nav';
 @import './components/header';
 @import './components/main';
-@import './components/nav';
+
 
 @font-face {
   font-family: 'Deftone Stylus';
   src: url(../fonts/deftone-stylus.ttf);
-  font-weight: regular;
+  font-weight: normal;
   font-style: normal;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 @import './config/media';
 

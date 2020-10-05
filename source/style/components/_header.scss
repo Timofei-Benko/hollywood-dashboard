@@ -1,7 +1,8 @@
-.header{
+.header {
 
   .options {
     display: flex;
+    overflow-x: scroll;
     
     &__item {
       display: flex;
@@ -9,15 +10,29 @@
       height: 70px;
 
       border-left: 2px solid #F1F1F1;
-      background-color: #fff; //         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      background-color: #FFFFFF; 
+
+      @include xs {
+        flex-shrink: 1;
+        flex-basis: 40px;
+        height: 40px;
+      }
+
+      @include md {
+        flex-grow: 1;
+      }
 
       .options__button {
         width: 59px;
 
-        background: url(../../img/) transparent;
+        background: transparent;
         border: none;
         outline: none;
         cursor: pointer;
+
+          @include md {
+            margin: 0 auto;
+          }
       }
       
       .options__button--more {
@@ -32,6 +47,15 @@
         background: url(../img/header/settings.png) no-repeat center;
       }
 
+      .options__button--search {
+        display: none;
+        background: url(../img/header/search-gradient.png) no-repeat center;
+
+        @include md {
+          display: block;
+        }
+      }
+
       .options__button--upload {
         background: url(../img/header/upload.png) no-repeat center;
       }
@@ -43,6 +67,7 @@
       .options__button--planet-earth {
         position: relative;
         background: url(../img/header/planet-earth.png) no-repeat center;
+        z-index: 0;
       }
 
       .options__button--planet-earth::before {
@@ -65,20 +90,28 @@
     }
 
     &__item:first-child {
-      box-shadow: inset 63px 40px 20px -70px rgba(0,0,0,0.32);
+      box-shadow: inset 63px 40px 20px -70px #00000052;
     }
 
+    &__item:first-child,
     &__item:last-child {
       border-left: none;
     }
 
     // Search ****************************************
     .search {
+      @include md {
+        display: none;
+      }
+
       position: relative;
+      display: flex;
+
+      max-width: 673px;
     }
 
     .search__input {
-      width: 300px;
+      max-width: 300px;
       height: 34px;
       padding: 12px;
       margin: 18px 0;
@@ -97,7 +130,7 @@
     .search__submit {
       position: absolute;
       top: 25px;
-      right: 13px;
+      right: 25px;
 
       flex: 0 0 16px;
       width: 20px;
@@ -117,8 +150,23 @@
       display: flex;
       align-items: center;
       flex-basis: 244px;
+
+      @include sm {
+        flex-basis: 40px;
+      }
+
+      &__photo {
+        @include xs {
+          width: 40px;
+        }
+      }
       
       &__about {
+
+        @include sm {
+          display: none;
+        }
+
         flex-grow: 1;
         margin-left: 18px;
 
@@ -147,7 +195,7 @@
         width: 5px;
         height: 21px;
         padding-top: 8px;
-        margin-right: 18px;
+        margin: 0 18px;
       }
 
       &__more-information > span {
@@ -185,27 +233,33 @@
     }
   }
 
-  // Stactics ************************************
-  .stactics {
+  // Statistics ************************************
+
+  .statistics {
     display: flex;
     align-items: center;
     padding-left: 45px;
 
     border-top: 2px solid #F1F1F1;
-    background-color: #fff; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    background-color: #FFFFFF;
+    overflow-x: scroll;
+    z-index: 0;
+
+    @include md {
+      padding-left: 20px;
+    }
 
     &__list {
       flex: 1 1 auto;
       display: flex;
       justify-content: space-between;
-      padding: 22px 0;
+      padding: 17px 0;
     }
 
     &__add-card {
       @include text-gradient(to right);
-      flex: 0 3 160px;
+      flex: 0 0 160px;
       height: 25px;
-      // margin: 0 60px;
        
       font-size: 12px;
       font-weight: bold;
@@ -217,10 +271,10 @@
   }
 
   .card {
+    min-width: 90px;
     margin-right: 20px;
 
     font-weight: bold;
-
     list-style-type: none;
 
     &__title {
@@ -232,22 +286,18 @@
 
     &__amount {
       @include text-gradient(to right);
-
       font-size: 20px;
     }
 
     &__spread {
       position: relative;
-
       margin-top: 3px;
     }
 
     &__buy-value,
     &__sell-value {
       margin-bottom: 8px;
-
       font-size: 12px;
-
       color: #BFBFBF;
     }
 
