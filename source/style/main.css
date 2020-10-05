@@ -403,7 +403,7 @@ template {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 271px;
+  max-width: 280px;
   max-height: 830px;
   background: #FFFFFF;
 }
